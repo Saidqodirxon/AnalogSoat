@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url(./soat.png);
+  background-size: cover;
+}
+
+.clock {
+  position: relative;
+
+  width: 500px;
+  height: 500px;
+}
+
+.needle {
+  /* background-color: #000; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in;
+}
+
+.needle.hour {
+  background-color: #000;
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+
+.needle.minute {
+  background-color: aqua;
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 120px;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 150px;
+  background-color: #e74c3c;
+}
+
+.center-point {
+  background-color: #e74c3c;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: "";
+  background-color: #fff;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+#soat {
+  color: #000;
+  position: absolute;
+  top: 20%;
+  left: 45%;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: crimson;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 65%;
+  left: 27%;
+}
